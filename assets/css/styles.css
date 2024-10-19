@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-areas: 
+    'nav nav'
+    'opciones principal'
+    'piepagina piepagina';
+
+    grid-template-columns: 15% auto;
+    grid-template-rows: 10% auto 10%; 
+
+    height: 100vh;
+}
+
+/*************************************************************************/
+nav {
+    grid-area: nav;
+    background-color: #0a0dbe;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    color: hwb(115 23% 11%);
+    padding: 40px;    
+}
+
+/*************************************************************************/
+.opciones {
+    grid-area: opciones;
+    background-color: rgb(221, 218, 218);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    flex-grow: 1;
+    
+    /*border: 2px solid rgb(221, 14, 221);*/
+}
+
+ul{
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    padding: 20px;
+    list-style: none;
+    
+    /*border: 2px solid rgb(0, 2, 128)*/
+}
+
+ul > li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+ul > li:hover {
+    background-color: #00ffff;
+    color: #000000;
+}
+
+h2 {
+    width: 100%;
+    color: #000000;
+    padding: 20px;
+
+    /*border: 2px solid green;*/
+}
+
+span {
+    color: #808080;
+}
+
+/*************************************************************************/
+.principal {
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,50%);
+
+    gap: 10px;
+    margin: 1rem;
+}
+
+.card {     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+           
+    border: 1px solid #000000;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /*border: 1px solid #36c23d;*/
+}
+
+.imagen img{   
+    flex-grow: 1;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+
+    /*border: 2px solid #000000;*/
+}
+
+.producto {
+    text-align: center;
+    
+    /*border:2px solid yellow*/
+}
+
+.producto h3 {
+    color: #ff0000;
+    margin-bottom: 15px;
+
+    /*border:2px solid #0000ff*/
+}
+
+.producto p {
+    color: #808080;
+    font-size: small;
+    margin-bottom: 15px;
+
+    /*border:2px solid black*/
+}
+
+.card button {
+    flex-grow: 1;
+    border: none;
+    width: 100%;
+    background-color: #0a0dbe;  
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    /*border:2px solid black*/
+}
+
+/*************************************************************************/
+.piepagina {
+    grid-area: piepagina;
+    background-color: hwb(115 23% 33%);
+    color: #0709a0;
+       
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 30px;
+}
